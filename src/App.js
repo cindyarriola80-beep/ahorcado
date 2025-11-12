@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Settings, X, Volume2, VolumeX, Pause, Play, Trophy, Star } from 'lucide-react';
+import { Home, Settings, X, Volume2, VolumeX, Pause, Trophy, Star } from 'lucide-react';
 
 const JuegoAhorcado = () => {
   const datos = {
