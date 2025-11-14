@@ -207,22 +207,125 @@ const JuegoAhorcado = () => {
   }, [pantalla, pausado, fin, nivel, tiempo]);
 
   const sonido = (tipo) => {
-    if (!cfg.sonido) return;
-    try {
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+  if (!cfg.sonido) return;
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    if (tipo === 'click') {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.connect(gain);
       gain.connect(ctx.destination);
-      
-      const sounds = { click: 400, bien: 600, mal: 200, gana: 800, pierde: 150 };
-      osc.frequency.value = sounds[tipo] || 400;
+      osc.frequency.value = 400;
       gain.gain.setValueAtTime(0.1, ctx.currentTime);
       osc.start(ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
       osc.stop(ctx.currentTime + 0.1);
-    } catch(e) {}
-  };
+    } else if (tipo === 'bien') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 600;
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+      osc.start(ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.15);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15);
+      osc.stop(ctx.currentTime + 0.15);
+    } else if (tipo === 'mal') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 200;
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+      osc.start(ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(100, ctx.currentTime + 0.2);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
+      osc.stop(ctx.currentTime + 0.2);
+    } else if (tipo === 'gana') {
+      // 🎉 SONIDO DE CELEBRACIÓN ÉPICO
+      const melodia = [
+        { freq: 523.25, time: 0 },      // Do
+        { freq: 659.25, time: 0.15 },   // Mi
+        { freq: 783.99, time: 0.3 },    // Sol
+        { freq: 1046.50, time: 0.45 },  // Do alto
+        { freq: 1318.51, time: 0.6 },   // Mi alto
+        { freq: 1568, time: 0.75 },     // Sol alto
+        { freq: 2093, time: 0.9 }       // Do muy alto
+      ];
+      
+      melodia.forEach(nota => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = nota.freq;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.3, ctx.currentTime + nota.time);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + nota.time + 0.2);
+        osc.start(ctx.currentTime + nota.time);
+        osc.stop(ctx.currentTime + nota.time + 0.2);
+      });
+      
+      // Efecto de brillo adicional
+      setTimeout(() => {
+        [1046.50, 1318.51, 1568].forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.frequency.value = freq;
+          osc.type = 'triangle';
+          gain.gain.setValueAtTime(0.15, ctx.currentTime + i * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + i * 0.08 + 0.15);
+          osc.start(ctx.currentTime + i * 0.08);
+          osc.stop(ctx.currentTime + i * 0.08 + 0.15);
+        });
+      }, 100);
+      
+    } else if (tipo === 'pierde') {
+      // 💀 SONIDO DE GAME OVER DRAMÁTICO
+      const gameOver = [
+        { freq: 392, time: 0 },      // Sol
+        { freq: 349.23, time: 0.2 }, // Fa
+        { freq: 293.66, time: 0.4 }, // Re
+        { freq: 246.94, time: 0.6 }, // Si
+        { freq: 196, time: 0.8 },    // Sol grave
+        { freq: 130.81, time: 1 }    // Do muy grave
+      ];
+      
+      gameOver.forEach(nota => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = nota.freq;
+        osc.type = 'sawtooth';
+        gain.gain.setValueAtTime(0.25, ctx.currentTime + nota.time);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + nota.time + 0.3);
+        osc.start(ctx.currentTime + nota.time);
+        osc.stop(ctx.currentTime + nota.time + 0.3);
+      });
+      
+      // Efecto de eco grave
+      setTimeout(() => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = 65.41; // Do muy muy grave
+        osc.type = 'triangle';
+        gain.gain.setValueAtTime(0.2, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.8);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.8);
+      }, 200);
+    }
+  } catch(e) {
+    console.error('Error al reproducir sonido:', e);
+  }
+};
 
   const iniciar = () => {
     setPuntos(0);
