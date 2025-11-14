@@ -50,7 +50,7 @@ const JuegoAhorcado = () => {
           { palabra: 'DOCTOR STRANGE', pista: 'Hechicero', puntos: 30 },
         ],
         medio: [
-          { palabra: 'WAKANDA', pista: 'Telaraña', puntos: 50 },
+          { palabra: 'WAKANDA', pista: 'Donde es rey black panter', puntos: 50 },
           { palabra: 'PIEDRA DEL TIEMPO', pista: '¿Qué piedra del infinito controla el tiempo?', puntos: 50 },
           { palabra: 'MAGNETO', pista: '¿Qué mutante puede controlar el metal?', puntos: 50 },
           { palabra: 'STAR LORD', pista: '¿Quién es el líder de los Guardianes de la Galaxia?', puntos: 50 },
@@ -281,7 +281,7 @@ const JuegoAhorcado = () => {
     if (powerUps[tipo] <= 0 || fin) return;
     
     sonido('bien');
-    setPowerUps({...cfg, [tipo]: powerUps[tipo] - 1});
+    setPowerUps({...powerUps, [tipo]: powerUps[tipo] - 1});
     
     if (tipo === 'bomba') {
       const teclado = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
@@ -290,7 +290,7 @@ const JuegoAhorcado = () => {
     } else if (tipo === 'escudo') {
       if (errores > 0) setErrores(errores - 1);
     } else if (tipo === 'vision') {
-      const vocales = juego.palabra.split('').filter(l => 'AEIOU'.includes(l) && !letras.includes(l));
+       const vocales = juego.palabra.split('').filter(l => 'AEIOUÁÉÍÓÚ'.includes(l.toUpperCase()) && !letras.includes(l));
       setLetras([...letras, ...vocales]);
     }
   };
