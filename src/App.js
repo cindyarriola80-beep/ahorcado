@@ -329,7 +329,6 @@ const JuegoAhorcado = () => {
 
   const iniciar = () => {
     setPuntos(0);
-    setNivel(1);
     setPalabrasOk(0);
     setRacha(0);
     setPowerUps({ bomba: 3, escudo: 2, vision: 1 });
