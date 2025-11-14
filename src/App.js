@@ -185,6 +185,8 @@ const JuegoAhorcado = () => {
   const [verCfg, setVerCfg] = useState(false);
   const [confeti, setConfeti] = useState(false);
 
+  const [palabrasUsadas, setPalabrasUsadas] = useState([]);
+
   const maxErr = { facil: 8, medio: 6, dificil: 4 };
   const limite = maxErr[dif];
 
@@ -228,22 +230,40 @@ const JuegoAhorcado = () => {
     setPalabrasOk(0);
     setRacha(0);
     setPowerUps({ bomba: 3, escudo: 2, vision: 2 });
+     setPalabrasUsadas([]);
     setPantalla('menu');
   };
 
   const elegir = (c) => {
     sonido('click');
     setCat(c);
+    setPalabrasUsadas([]);
     nuevaPalabra(c);
     setPantalla('juego');
   };
 
-  const nuevaPalabra = (c) => {
+ const nuevaPalabra = (c) => {
     const categoria = c || cat;
-    // Obtener palabras según la dificultad seleccionada
     const palabrasPorDificultad = datos[categoria].palabras[dif];
-    const palabra = palabrasPorDificultad[Math.floor(Math.random() * palabrasPorDificultad.length)];
-    setJuego(palabra);
+    
+    // NUEVO: Filtrar palabras que no han sido usadas
+    const palabrasDisponibles = palabrasPorDificultad.filter(
+      p => !palabrasUsadas.includes(p.palabra)
+    );
+    
+    // NUEVO: Si ya se usaron todas, reiniciar la lista
+    if (palabrasDisponibles.length === 0) {
+      setPalabrasUsadas([]);
+      const palabra = palabrasPorDificultad[Math.floor(Math.random() * palabrasPorDificultad.length)];
+      setJuego(palabra);
+      setPalabrasUsadas([palabra.palabra]); // Agregar la nueva palabra a usadas
+    } else {
+      // NUEVO: Seleccionar de las palabras disponibles
+      const palabra = palabrasDisponibles[Math.floor(Math.random() * palabrasDisponibles.length)];
+      setJuego(palabra);
+      setPalabrasUsadas([...palabrasUsadas, palabra.palabra]); // Agregar a usadas
+    }
+    
     setLetras([]);
     setErrores(0);
     setFin(false);
@@ -261,7 +281,7 @@ const JuegoAhorcado = () => {
     if (powerUps[tipo] <= 0 || fin) return;
     
     sonido('bien');
-    setPowerUps({...powerUps, [tipo]: powerUps[tipo] - 1});
+    setPowerUps({...cfg, [tipo]: powerUps[tipo] - 1});
     
     if (tipo === 'bomba') {
       const teclado = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
@@ -336,7 +356,6 @@ const JuegoAhorcado = () => {
 
   const teclado = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
   const gano = juego && juego.palabra.split('').every(l => letras.includes(l) || l === ' ');
-
   if (pantalla === 'inicio') {
     return (
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
