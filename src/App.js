@@ -177,7 +177,7 @@ const JuegoAhorcado = () => {
   const [racha, setRacha] = useState(0);
   const [mejorScore, setMejorScore] = useState(0);
   
-  const [powerUps, setPowerUps] = useState({ bomba: 3, escudo: 2, vision: 2 });
+  const [powerUps, setPowerUps] = useState({ bomba: 3, escudo: 2, vision: 1 });
   const [tiempo, setTiempo] = useState(null);
   const [dif, setDif] = useState('medio');
   
