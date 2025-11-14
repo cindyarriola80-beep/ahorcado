@@ -332,7 +332,7 @@ const JuegoAhorcado = () => {
     setNivel(1);
     setPalabrasOk(0);
     setRacha(0);
-    setPowerUps({ bomba: 3, escudo: 2, vision: 2 });
+    setPowerUps({ bomba: 3, escudo: 2, vision: 1 });
      setPalabrasUsadas([]);
     setPantalla('menu');
   };
