@@ -15,6 +15,17 @@ const JuegoAhorcado = () => {
           { palabra: 'Murcielago', pista: 'Simbolo de batman', puntos: 30 },
           { palabra: 'BATIMOVIL', pista: 'Vehiculo de batman', puntos: 30 },
           { palabra: 'JOKER', pista: 'Villano que rie', puntos: 30 },
+          { palabra: 'NIGHTWING', pista: 'Primer Robin independiente', puntos: 30 },
+          { palabra: 'COMISIONADO GORDON', pista: 'Aliado clave en la policía', puntos: 30 },
+          { palabra: 'BATISEÑAL', pista: 'Sirve para llamarlo', puntos: 30 },
+{ palabra: 'HIEDRA VENENOSA', pista: 'Villana que controla plantas', puntos: 30 },
+{ palabra: 'ESPANTAPAJAROS', pista: 'Usa toxinas del miedo', puntos: 30 },
+{ palabra: 'HARLEY QUINN', pista: 'Acompaña al Joker', puntos: 30 },
+{ palabra: 'BATI CUEVA', pista: 'Es su base secreta', puntos: 30 },
+{ palabra: 'LUCIUS FOX', pista: 'Diseña su tecnología', puntos: 30 },
+{ palabra: 'TIM DRAKE', pista: 'Tercer Robin', puntos: 30 },
+{ palabra: 'RAS AL GHUL', pista: 'Líder de la Liga de Asesinos', puntos: 30 },
+
 
         ],
         medio: [
@@ -24,6 +35,17 @@ const JuegoAhorcado = () => {
           { palabra: 'WAYNE ENTERPRISES', pista: 'En que empresa trabaja bruce wayne?', puntos: 30 },
           { palabra: 'EL ACERTIJO', pista: 'Villano que usa acertijos', puntos: 30 },
           { palabra: 'CATWOMAN', pista: 'Ladrona felina', puntos: 30 },
+          { palabra: 'AZRAEL', pista: 'Reemplazó a Batman temporalmente', puntos: 50 },
+{ palabra: 'HUGO STRANGE', pista: 'Doctor que descubre su identidad', puntos: 50 },
+{ palabra: 'BATWING', pista: 'Vehículo aéreo', puntos: 50 },
+{ palabra: 'BATGIRL', pista: 'Heroína aliada', puntos: 50 },
+{ palabra: 'ORFEO', pista: 'Héroe de Gotham poco conocido', puntos: 50 },
+{ palabra: 'KILLER CROC', pista: 'Villano con piel reptil', puntos: 50 },
+{ palabra: 'CALENDARMAN', pista: 'Villano obsesionado con fechas', puntos: 50 },
+{ palabra: 'HUSH', pista: 'Villano cirujano obsesionado con Bruce', puntos: 50 },
+{ palabra: 'VICTOR ZSASZ', pista: 'Villano que marca a sus víctimas', puntos: 50 },
+{ palabra: 'MAN BAT', pista: 'Versión monstruosa de murciélago', puntos: 50 },
+
         ],
         dificil: [
           { palabra: 'BANE', pista: '¿Qué villano rompió la espalda de Batman?', puntos: 70 },
@@ -32,6 +54,18 @@ const JuegoAhorcado = () => {
           { palabra: 'BARBARA GORDON', pista: '¿Quién fue la primera Batichica?', puntos: 70 },
           { palabra: 'JASON TODD', pista: '¿Quién fue el segundo Robin?', puntos: 70 },
           { palabra: 'HARVERY DENT', pista: '¿Cuál es el nombre real de Dos Caras?', puntos: 70 },
+          { palabra: 'CABALLERO OSCURO', pista: 'Apodo clásico de Batman', puntos: 70 },
+{ palabra: 'NO MANS LAND', pista: 'Saga donde Gotham queda aislada', puntos: 70 },
+{ palabra: 'CABALLERO BLANCO', pista: 'Universo alterno donde Joker es héroe', puntos: 70 },
+{ palabra: 'BATMAN YEAR ONE', pista: 'Comic de su primer año', puntos: 70 },
+{ palabra: 'LINDA FRIGIDA', pista: 'Nombre real de Nora Fries', puntos: 70 },
+{ palabra: 'BATMAN BEYOND', pista: 'Futuro sucesor de Batman', puntos: 70 },
+{ palabra: 'MASCARA DEL FANTASMA', pista: 'Villano de una película animada', puntos: 70 },
+{ palabra: 'BATFAMILY', pista: 'Grupo de aliados de Batman', puntos: 70 },
+{ palabra: 'OSITO GRIS', pista: 'Objeto sentimental de Robin', puntos: 70 },
+{ palabra: 'CABALLERO DE ARKHAM', pista: 'Identidad oculta de un enemigo', puntos: 70 },
+
+          
           
         ]
       }
@@ -48,6 +82,17 @@ const JuegoAhorcado = () => {
           { palabra: 'BLACK WIDOW', pista: 'Traje negro', puntos: 30 },
           { palabra: 'BLACK PANTHER', pista: 'Rey de Tchalla', puntos: 30 },
           { palabra: 'DOCTOR STRANGE', pista: 'Hechicero', puntos: 30 },
+          { palabra: 'LOKI', pista: 'Dios del engaño', puntos: 30 },
+{ palabra: 'VISION', pista: 'Android con gema en la frente', puntos: 30 },
+{ palabra: 'NICK FURY', pista: 'Director de S.H.I.E.L.D.', puntos: 30 },
+{ palabra: 'GAMORA', pista: 'Hija de Thanos', puntos: 30 },
+{ palabra: 'ROCKET', pista: 'Mapache inteligente', puntos: 30 },
+{ palabra: 'HAWKEYE', pista: 'Experto en arco', puntos: 30 },
+{ palabra: 'ANT MAN', pista: 'Héroe que cambia de tamaño', puntos: 30 },
+{ palabra: 'WANDA', pista: 'Bruja Escarlata', puntos: 30 },
+{ palabra: 'VENOM', pista: 'Simbionte', puntos: 30 },
+{ palabra: 'DEADPOOL', pista: 'Mercenario bromista', puntos: 30 },
+
         ],
         medio: [
           { palabra: 'WAKANDA', pista: 'Donde es rey black panter', puntos: 50 },
@@ -56,6 +101,17 @@ const JuegoAhorcado = () => {
           { palabra: 'STAR LORD', pista: '¿Quién es el líder de los Guardianes de la Galaxia?', puntos: 50 },
           { palabra: 'PIEDRA DE LA MENTE', pista: '¿Qué piedra tiene visión en la frente?', puntos: 50 },
           { palabra: 'NUEVA YORK', pista: '¿Qué ciudad protege Spider-Man?', puntos: 50 },
+          { palabra: 'ULTRON', pista: 'Robot enemigo de los Vengadores', puntos: 50 },
+{ palabra: 'THANOS', pista: 'Busca las gemas del infinito', puntos: 50 },
+{ palabra: 'QUICKSILVER', pista: 'Hermano de Wanda', puntos: 50 },
+{ palabra: 'JARVIS', pista: 'IA de Tony Stark', puntos: 50 },
+{ palabra: 'PEGGY CARTER', pista: 'Amor del Capitán América', puntos: 50 },
+{ palabra: 'WAKANDANOS', pista: 'Habitantes de Wakanda', puntos: 50 },
+{ palabra: 'WOLVERINE', pista: 'Garras de adamantium', puntos: 50 },
+{ palabra: 'STAN LEE', pista: 'Creador de muchos héroes', puntos: 50 },
+{ palabra: 'ODIN', pista: 'Padre de Thor', puntos: 50 },
+{ palabra: 'SHURI', pista: 'Hermana de Black Panther', puntos: 50 },
+
         ],
         dificil: [
           { palabra: 'IRON MAN DOS MIL OCHO', pista: '¿Cuál fue la primera película del Universo Cinematográfico de Marvel?', puntos: 70 },
@@ -64,6 +120,17 @@ const JuegoAhorcado = () => {
           { palabra: 'DR ERSKINE', pista: '¿Qué científico creó al Capitán América?', puntos: 70 },
           { palabra: 'KILLMONGER', pista: '¿Qué villano controla Wakanda en los cómics?', puntos: 70 },
           { palabra: 'GROOT', pista: '¿Qué personaje dice “Yo soy ...”?', puntos: 70 },
+          { palabra: 'SOKOVIA', pista: 'País destruido por Ultrón', puntos: 70 },
+{ palabra: 'ADAM WARLOCK', pista: 'Ser dorado poderoso', puntos: 70 },
+{ palabra: 'YGGDRASIL', pista: 'Árbol cósmico', puntos: 70 },
+{ palabra: 'KAMALA KHAN', pista: 'Ms. Marvel actual', puntos: 70 },
+{ palabra: 'RED SKULL', pista: 'Enemigo del Capitán América', puntos: 70 },
+{ palabra: 'MULTIVERSO', pista: 'Concepto clave en fase 4', puntos: 70 },
+{ palabra: 'EGO', pista: 'Padre de Star Lord', puntos: 70 },
+{ palabra: 'CELestiales', pista: 'Seres cósmicos gigantes', puntos: 70 },
+{ palabra: 'DEVOURER', pista: 'Galactus es un ...', puntos: 70 },
+{ palabra: 'ANCIENT ONE', pista: 'Maestra del Doctor Strange', puntos: 70 },
+
         ]
       }
     },
