@@ -146,6 +146,17 @@ const JuegoAhorcado = () => {
           { palabra: 'BALONCESTO', pista: '¿En qué deporte se encestan pelotas?', puntos: 30 },
           { palabra: 'ARGENTINA', pista: '¿Qué país ganó el Mundial 2022?', puntos: 30 },
           { palabra: 'MESSI', pista: '¿Qué deportista es conocido como “La Pulga”?', puntos: 30 },
+          { palabra: 'CICLISMO', pista: 'Deporte de bicicletas', puntos: 30 },
+{ palabra: 'BOXEO', pista: 'Deporte de golpes con guantes', puntos: 30 },
+{ palabra: 'RUGBY', pista: 'Similar al fútbol americano', puntos: 30 },
+{ palabra: 'KARATE', pista: 'Arte marcial japonés', puntos: 30 },
+{ palabra: 'SURF', pista: 'Deporte en olas', puntos: 30 },
+{ palabra: 'PATINAJE', pista: 'Sobre ruedas o hielo', puntos: 30 },
+{ palabra: 'TAEKWONDO', pista: 'Arte marcial coreano', puntos: 30 },
+{ palabra: 'BEISBOL', pista: 'Se juega con bate', puntos: 30 },
+{ palabra: 'PESCA', pista: 'Actividad con caña', puntos: 30 },
+{ palabra: 'KARTING', pista: 'Carreras de karts', puntos: 30 },
+
         ],
         medio: [
           { palabra: 'MICHAEL JORDAN', pista: '¿Qué jugador de baloncesto es apodado “Air”?', puntos: 50 },
@@ -154,6 +165,18 @@ const JuegoAhorcado = () => {
           { palabra: 'TRES', pista: '¿Cuántos puntos vale un triple en baloncesto?', puntos: 50 },
           { palabra: 'GOLF', pista: '¿En qué deporte se usa un palo y una bola blanca?', puntos: 50 },
           { palabra: 'URUGUAY', pista: '¿Qué país ganó el primer Mundial de fútbol?', puntos: 50 },
+          { palabra: 'SERENA WILLIAMS', pista: 'Leyenda del tenis femenino', puntos: 50 },
+{ palabra: 'CRISTIANO RONALDO', pista: 'CR7', puntos: 50 },
+{ palabra: 'FORMULA UNO', pista: 'Carreras de autos', puntos: 50 },
+{ palabra: 'NADAL', pista: 'Rey de la arcilla', puntos: 50 },
+{ palabra: 'DECATLON', pista: 'Prueba con 10 disciplinas', puntos: 50 },
+{ palabra: 'MARATON', pista: 'Carrera de 42 km', puntos: 50 },
+{ palabra: 'ESGRIMA', pista: 'Deporte de espadas', puntos: 50 },
+{ palabra: 'BUNDESLIGA', pista: 'Liga alemana de fútbol', puntos: 50 },
+{ palabra: 'MOTOGP', pista: 'Competencia de motos', puntos: 50 },
+{ palabra: 'COPA LIBERTADORES', pista: 'Torneo de clubes sudamericanos', puntos: 50 },
+
+          
         ],
         dificil: [
           { palabra: 'ATLETISMO', pista: 'Carreras y saltos', puntos: 70 },
@@ -162,6 +185,17 @@ const JuegoAhorcado = () => {
           { palabra: 'MESSI', pista: '¿Qué futbolista jugó en Barcelona y PSG?', puntos: 70 },
           { palabra: 'ESPAÑA', pista: '¿Qué país ganó el Mundial 2010?', puntos: 70 },
           { palabra: 'INGLATERRA', pista: '¿Qué país inventó el tenis de mesa?', puntos: 70 },
+          { palabra: 'MICHAEL PHELPS', pista: 'Nadador con más medallas olímpicas', puntos: 70 },
+{ palabra: 'FOSBURY FLOP', pista: 'Técnica de salto alto', puntos: 70 },
+{ palabra: 'TRIATLON', pista: 'Incluye natación, bici y carrera', puntos: 70 },
+{ palabra: 'BAYERN MUNICH', pista: 'Equipo alemán dominante', puntos: 70 },
+{ palabra: 'WIMBLEDON', pista: 'Torneo de tenis más antiguo', puntos: 70 },
+{ palabra: 'PELOTON', pista: 'Grupo de ciclistas', puntos: 70 },
+{ palabra: 'ULTRAMARATON', pista: 'Más larga que una maratón', puntos: 70 },
+{ palabra: 'KOBE BRYANT', pista: 'La Mamba Negra', puntos: 70 },
+{ palabra: 'FAIR PLAY', pista: 'Juego limpio', puntos: 70 },
+{ palabra: 'APERTURA ARGENTINA', pista: 'Antiguo torneo de fútbol', puntos: 70 },
+
         ]
       }
     },
@@ -177,13 +211,35 @@ const JuegoAhorcado = () => {
           { palabra: 'PEZ', pista: '¿Qué animal vive en el agua y tiene aletas?', puntos: 30 },
           { palabra: 'ABEJA', pista: '¿Qué insecto produce miel?', puntos: 30 },
           { palabra: 'ELEFANTE', pista: '¿Qué animal tiene una trompa larga?', puntos: 30 },
+          { palabra: 'TORTUGA', pista: 'Caparazón duro', puntos: 30 },
+{ palabra: 'CABRA', pista: 'Da leche y escala montañas', puntos: 30 },
+{ palabra: 'RANA', pista: 'Salta y vive en el agua', puntos: 30 },
+{ palabra: 'LOBO', pista: 'Aúlla', puntos: 30 },
+{ palabra: 'BURRO', pista: 'Animal de carga', puntos: 30 },
+{ palabra: 'PATO', pista: 'Hace cuac cuac', puntos: 30 },
+{ palabra: 'CERDO', pista: 'Animal rosado', puntos: 30 },
+{ palabra: 'TIGRE', pista: 'Felino rayado', puntos: 30 },
+{ palabra: 'KOALA', pista: 'Duerme todo el día', puntos: 30 },
+{ palabra: 'PANDA', pista: 'Come bambú', puntos: 30 },
+
         ],
         medio: [
           { palabra: 'MURCIELAGO', pista: '¿Qué mamífero puede volar?', puntos: 50 },
           { palabra: 'JIRAFA', pista: 'Cuello muy largo', puntos: 50 },
           { palabra: 'CAMALEON', pista: '¿Qué animal cambia de color?', puntos: 30 },
           { palabra: 'PINGUINO', pista: '¿Qué animal vive en los polos?', puntos: 30 },
-          { palabra: 'CAMELLO', pista: '¿Qué animal tiene joroba?', puntos: 30 }
+          { palabra: 'CAMELLO', pista: '¿Qué animal tiene joroba?', puntos: 30 },
+          { palabra: 'AVESTRUZ', pista: 'Ave más grande del mundo', puntos: 50 },
+{ palabra: 'BUFALO', pista: 'Tiene grandes cuernos', puntos: 50 },
+{ palabra: 'LOMBRIZ', pista: 'Vive bajo tierra', puntos: 50 },
+{ palabra: 'NUTRIA', pista: 'Nada y juega mucho', puntos: 50 },
+{ palabra: 'GAVILAN', pista: 'Ave cazadora', puntos: 50 },
+{ palabra: 'DRAGON DE KOMODO', pista: 'Gran reptil venenoso', puntos: 50 },
+{ palabra: 'TUCAN', pista: 'Pico colorido', puntos: 50 },
+{ palabra: 'MANTARRAYA', pista: 'Nada en forma plana', puntos: 50 },
+{ palabra: 'HURON', pista: 'Animal curioso y alargado', puntos: 50 },
+{ palabra: 'LOBO MARINO', pista: 'Animal que vive en costas', puntos: 50 },
+
          
         ],
         dificil: [
@@ -193,6 +249,17 @@ const JuegoAhorcado = () => {
           { palabra: 'TRES', pista: '¿Cuántos corazones tiene un pulpo?', puntos: 30 },
           { palabra: 'CABALLO', pista: '¿Qué animal puede dormir de pie', puntos: 30 },
           { palabra: 'CARACOL', pista: '¿Qué animal tiene más dientes?', puntos: 30 },
+          { palabra: 'AXOLOTE', pista: 'Anfibio que regenera todo', puntos: 70 },
+{ palabra: 'NARVAL', pista: 'Unicornio del mar', puntos: 70 },
+{ palabra: 'OKAPI', pista: 'Pariente raro de la jirafa', puntos: 70 },
+{ palabra: 'QUOKKA', pista: 'El animal más feliz', puntos: 70 },
+{ palabra: 'ALBATROS', pista: 'Ave con mayor envergadura', puntos: 70 },
+{ palabra: 'RINOCERONTE BLANCO', pista: 'Uno de los animales más pesados', puntos: 70 },
+{ palabra: 'MANDRIL', pista: 'Mono con cara colorida', puntos: 70 },
+{ palabra: 'HALCON PEREGRINO', pista: 'Animal más rápido del mundo', puntos: 70 },
+{ palabra: 'PINGÜINO EMPERADOR', pista: 'El más grande de su especie', puntos: 70 },
+{ palabra: 'CAMALEON PANERA', pista: 'Camaleón colorido de Madagascar', puntos: 70 },
+
         ]
       }
     },
@@ -208,6 +275,17 @@ const JuegoAhorcado = () => {
           { palabra: 'PORTUGUES', pista: '¿Qué idioma se habla en Brasil?', puntos: 30 },
           { palabra: 'DOLAR', pista: '¿Qué moneda se usa en Estados Unidos?', puntos: 30 },
           { palabra: 'ITALIA', pista: '¿Qué país tiene forma de bota?', puntos: 30 },
+          { palabra: 'JAPON', pista: 'País del sol naciente', puntos: 30 },
+{ palabra: 'ROMA', pista: 'Capital italiana', puntos: 30 },
+{ palabra: 'AMAZONIA', pista: 'Selva enorme', puntos: 30 },
+{ palabra: 'VENECIA', pista: 'Ciudad de los canales', puntos: 30 },
+{ palabra: 'LIBRA', pista: 'Moneda del Reino Unido', puntos: 30 },
+{ palabra: 'SAHARA', pista: 'Desierto más grande', puntos: 30 },
+{ palabra: 'OXIGENO', pista: 'Gas esencial para vivir', puntos: 30 },
+{ palabra: 'ARCOIRIS', pista: 'Aparece cuando llueve', puntos: 30 },
+{ palabra: 'MUSEO', pista: 'Lugar para ver arte', puntos: 30 },
+{ palabra: 'PIRAMIDES', pista: 'Construcciones egipcias', puntos: 30 },
+
         ],
         medio: [
           { palabra: 'EVEREST', pista: 'Montaña más alta', puntos: 50 },
@@ -216,6 +294,17 @@ const JuegoAhorcado = () => {
           { palabra: 'GABRIEL GARCIA MARQUEZ', pista: '¿Quién escribió “Cien años de soledad”?', puntos: 30 },
           { palabra: 'TERMOMETRO', pista: '¿Qué instrumento mide la temperatura', puntos: 30 },
           { palabra: 'AMAZONAS', pista: '¿Cuál es el río más largo del mundo?', puntos: 30 },
+          { palabra: 'GALILEO GALILEI', pista: 'Padre de la astronomía moderna', puntos: 50 },
+{ palabra: 'REVOLUCION FRANCESA', pista: 'Época de cambios en 1789', puntos: 50 },
+{ palabra: 'GOYA', pista: 'Famoso pintor español', puntos: 50 },
+{ palabra: 'ARCHIPIELAGO', pista: 'Conjunto de islas', puntos: 50 },
+{ palabra: 'MONA LISA', pista: 'Retrato famoso', puntos: 50 },
+{ palabra: 'NEANDERTAL', pista: 'Antiguo humano', puntos: 50 },
+{ palabra: 'MITOLOGIA GRIEGA', pista: 'Historias de dioses', puntos: 50 },
+{ palabra: 'OTTO VON BISMARCK', pista: 'Unificador alemán', puntos: 50 },
+{ palabra: 'BIG BANG', pista: 'Origen del universo', puntos: 50 },
+{ palabra: 'TAJ MAHAL', pista: 'Monumento indio famoso', puntos: 50 },
+
 
         ],
         dificil: [
@@ -225,6 +314,17 @@ const JuegoAhorcado = () => {
           { palabra: 'CHINA', pista: '¿Cuál es el país más poblado del mundo?', puntos: 30 },
           { palabra: 'ORO', pista: '¿Qué elemento tiene el símbolo Au?', puntos: 30 },
           { palabra: 'ALBERT EINSTEIN', pista: '¿Qué científico propuso la teoría de la relatividad?', puntos: 30 },
+          { palabra: 'GENGIS KAN', pista: 'Conquistador mongol', puntos: 70 },
+{ palabra: 'HELENISMO', pista: 'Cultura griega expandida', puntos: 70 },
+{ palabra: 'SUMERIA', pista: 'Antigua civilización', puntos: 70 },
+{ palabra: 'CARLOMAGNO', pista: 'Rey de los francos', puntos: 70 },
+{ palabra: 'ARISTOTELES', pista: 'Filósofo griego', puntos: 70 },
+{ palabra: 'MAGNA CARTA', pista: 'Documento histórico inglés', puntos: 70 },
+{ palabra: 'REVOLUCION INDUSTRIAL', pista: 'Cambió la producción', puntos: 70 },
+{ palabra: 'FENICIOS', pista: 'Grandes comerciantes antiguos', puntos: 70 },
+{ palabra: 'NUMISMATICA', pista: 'Estudio de monedas', puntos: 70 },
+{ palabra: 'ALQUIMIA', pista: 'Precursor de la química', puntos: 70 },
+
         ]
       }
     }
